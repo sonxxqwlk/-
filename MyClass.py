@@ -9,10 +9,15 @@ class MyClass:
     def get_value(self):
         return self.value
 
+    def set_value(self, value):
+        self.value = value
+
     def print_info(self):
-        print(f"Name: {self.name}, Value: {self.value}")
+        print(f"[MyClass] Name: {self.name}, Value: {self.value}")
 
 
 if __name__ == "__main__":
     obj = MyClass("Test", 42)
+    obj.print_info()
+    obj.set_value(100)
     obj.print_info()
